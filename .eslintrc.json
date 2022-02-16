@@ -14,7 +14,22 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "react/jsx-props-no-spreading": "off",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": false
+      }
+    ],
+    "react/no-array-index-key": 0,
+    "import/prefer-default-export": 0,
+    "react/prop-types": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "linebreak-style": 0,
+    "react/function-component-definition": 0,
+    "arrow-body-style": 0,
+    "react/jsx-props-no-spreading": 0,
     "react/jsx-filename-extension": [
       1,
       { "extensions": [".js", ".jsx", "tsx", "ts"] }

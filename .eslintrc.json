@@ -32,9 +32,11 @@
     "import/extensions": 0,
     "import/no-unresolved": 0,
     "linebreak-style": 0,
+    "jsx-a11y/label-has-associated-control": 0,
     "react/function-component-definition": 0,
     "arrow-body-style": 0,
     "react/jsx-props-no-spreading": 0,
+    "no-useless-return": 0,
     "react/jsx-filename-extension": [
       1,
       { "extensions": [".js", ".jsx", "tsx", "ts"] }

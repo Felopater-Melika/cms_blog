@@ -3,11 +3,13 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { getRecentPosts, getSimilarPosts } from '../services';
 
-const PostWidget: React.FC = ({ slug }: any) => {
+const PostWidget: React.FC<any> = ({ categories, slug }: any) => {
   const [relatedPosts, setRelatedPosts] = useState([] as any[]);
   useEffect(() => {
     if (slug) {
-      getSimilarPosts().then((response) => setRelatedPosts(response));
+      getSimilarPosts(categories, slug).then((response) =>
+        setRelatedPosts(response)
+      );
     } else {
       getRecentPosts().then((response) => setRelatedPosts(response));
     }

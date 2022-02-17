@@ -1,12 +1,16 @@
 import Link from 'next/link';
-import React from 'react';
-
-const categories: {}[] = [
-  { name: 'category', slug: 'category' },
-  { name: 'category', slug: 'category' },
-];
+import React, { useEffect, useState } from 'react';
+import { getCategories } from '../services';
 
 const Header: React.FC = () => {
+  const [categories, setCategories] = useState([] as any);
+
+  useEffect(() => {
+    getCategories().then((category) => {
+      setCategories(category);
+    });
+  }, []);
+
   return (
     <div className="container mx-auto mb-8 px-10">
       <div className="inline-block w-full border-b border-blue-400 py-8">
